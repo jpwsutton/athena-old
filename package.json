@@ -1,0 +1,10 @@
+{
+  "name"         : "athena",
+  "version"      : "0.0.1",
+  "description"  : "MQTT Recording and presentation.",
+  "main"         : "athena.js",
+  "author"       : "jsutton",
+  "dependencies" : {
+    "mqtt"       : "0.3.12"
+  }
+}

@@ -36,14 +36,4 @@ Currently: Clone the repository, run `npm install --production`
 `node athena.js`
 
 ## Settings file
-This is the current spec for the settings file. It should be called settings.js and live in the root of the app.
-
-### Example settings.js
-```
-{
-  // Set up MQTT Broker and Topic here
-  mqttBroker: "localhost",
-  mqttBrokerPort: 1234,
-  
-}
-```
+This is the current spec for the settings file. It should be called settings.json and live in the root of the app.
