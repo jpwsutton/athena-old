@@ -5,6 +5,7 @@
   "main"         : "athena.js",
   "author"       : "jsutton",
   "dependencies" : {
-    "mqtt"       : "0.3.12"
+    "mqtt"       : "0.3.12",
+    "mongodb"    : "1.4.19"
   }
 }
