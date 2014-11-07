@@ -1,0 +1,12 @@
+{
+  "mqttBrokerHost"  : "localhost",
+  "mqttBrokerPort"  : 1883,
+  "mqttBrokerUser"  : null,
+  "mqttBrokerPass"  : null,
+  "mqttBrokerTopic" : "/home/#",
+
+  "mongoDbHost"     : "localhost",
+  "mongoDbPort"     : 27017,
+
+  "verbose"         : true
+}

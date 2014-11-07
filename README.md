@@ -37,3 +37,19 @@ Currently: Clone the repository, run `npm install --production`
 
 ## Settings file
 This is the current spec for the settings file. It should be called settings.json and live in the root of the app.
+
+```
+{
+  "mqttBrokerHost"  : "localhost",
+  "mqttBrokerPort"  : 1883,
+  "mqttBrokerUser"  : null,
+  "mqttBrokerPass"  : null,
+  "mqttBrokerTopic" : "/home/#",
+
+  "mongoDbHost"     : "localhost",
+  "mongoDbPort"     : 27017,
+
+  "verbose"         : true
+}
+
+```
