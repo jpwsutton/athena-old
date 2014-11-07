@@ -1,6 +1,6 @@
 
 
-var config = require('./settings');
+var config = require('./settings.json');
 var pjson = require('./package.json');
 
 var mqtt = require('mqtt');
@@ -8,7 +8,7 @@ var mongodb = require('mongodb');
 
 console.log("---- Athena ----");
 console.log("Version: " + pjson.version);
-console.log("Broker:  " + config.mqttBrokerHost);
+console.log("Broker:  " + config.mqttBrokerHost + ":" + config.mqttBrokerPort);
 console.log("Topic:   " + config.mqttBrokerTopic);
 console.log("----------------")
 
@@ -18,9 +18,9 @@ MqttClient.subscribe(config.mqttBrokerTopic);
 
 MongoClient = mongodb.MongoClient;
 
-MongoClient.connect("mongodb://" + config.mongoHost + ":" + config.mongoPort + "/athena", function(err, db){
+MongoClient.connect("mongodb://" + config.mongoDbHost + ":" + config.mongoDbPort + "/athena", function(err, db){
   if (!err){
-    console.log("Connected to MongoDB");
+    logMessage("Connected to MongoDB");
     // Create the collections if they do not yet exist
     db.createCollection('topics', function(err, collection) {});
     db.createCollection('records', function(err, collection) {});
@@ -30,14 +30,19 @@ MongoClient.connect("mongodb://" + config.mongoHost + ":" + config.mongoPort + "
 
     MqttClient.on('message', function (topic, message) {
       var record = {};
-      record.payload = JSON.parse(message);
+      try {
+        record.payload = JSON.parse(message);
+      } catch (e) {
+        record.payload = {content: message, _type : "unknown"};
+      }
       record.topic = topic;
       record.time = new Date().getTime();
-      console.log();
-      console.log("----------------------------------")
-      console.log(record);
+      logMessage();
+      logMessage("----------------------------------")
+      logMessage(record);
       verifyOrCreateTopic(topicCollection, record);
-      console.log("----------------------------------")
+      recordsCollection.insert(record, {w:1}, function(err, result){});
+      logMessage("----------------------------------")
     });
   }
 
@@ -58,22 +63,26 @@ MongoClient.connect("mongodb://" + config.mongoHost + ":" + config.mongoPort + "
 function verifyOrCreateTopic(topicCollection, message){
   topicCollection.findOne({topic:message.topic}, function(err, item) {
     if (item == null){
-        console.log("Topic %s does not exist, creating.", message.topic);
+        logMessage("Topic " + message.topic + " does not exist, creating.");
         var topicRecord = {};
         topicRecord.topic = message.topic;
         if(message.payload._type){
           topicRecord.type = message.payload._type;
         }
-
         topicCollection.insert(topicRecord, {w:1}, function(err, result) {});
     }
-
   });
 }
 
+
+
 function logMessage(message){
   if(config.verbose){
-    console.log(message);
+    if(message == null){
+      console.log("");
+    } else {
+      console.log(message);
+    }
   }
 
 }
