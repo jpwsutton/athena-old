@@ -42,7 +42,7 @@ This is the current spec for the settings file. It should be called settings.jso
 
 ```
 {
-  // The MQTT Broker Details
+  // The MQTT Broker Detailsmark
   "mqttBrokerHost"  : "localhost",
   "mqttBrokerPort"  : 1883,
   "mqttBrokerUser"  : null,
@@ -65,5 +65,6 @@ This is the current spec for the settings file. It should be called settings.jso
 ## REST API Specification
 
 |      URI     |         Function         |   Example   |          Status          |
+|--------------|--------------------------|-------------|--------------------------|
 | /api/topics  | Returns a list of topics | /api/topics | :heavy_multiplication_x: |
 | /api/records/? | Returns records for a topic | TODO | :heavy_multiplication_x: |
