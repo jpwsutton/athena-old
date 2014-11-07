@@ -45,9 +45,17 @@ MongoClient.connect("mongodb://" + config.mongoHost + ":" + config.mongoPort + "
 
 });
 
+/*
+ *               verifyOrCreateTopic
+ *
+ * topicCollection -> MongoDb Collection for topics
+ * message -> message object containing payload and topic
+ *
+ * This function queries the collection to see if this topic
+ * exists in it. If it does not exist, it is inserted.
+ *
+*/
 function verifyOrCreateTopic(topicCollection, message){
-  console.log("Checking topic: " + message.topic);
-
   topicCollection.findOne({topic:message.topic}, function(err, item) {
     if (item == null){
         console.log("Topic %s does not exist, creating.", message.topic);
@@ -57,13 +65,7 @@ function verifyOrCreateTopic(topicCollection, message){
           topicRecord.type = message.payload._type;
         }
 
-        console.log("Creating topic: %j", topicRecord);
-
-        topicCollection.insert(topicRecord, {w:1}, function(err, result) {
-          if(err){
-            console.log("Could not record topic: " + err);
-          }
-        });
+        topicCollection.insert(topicRecord, {w:1}, function(err, result) {});
     }
 
   });

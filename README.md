@@ -17,9 +17,10 @@ recording and storing it and then the client just has to query for
  what is available.
 
 ## To Do
-- [ ] Read in settings.js file
-- [ ] Subscribe to master topic
-- [ ] Create suitable objects with messages arrive
+- [x] Read in settings.js file
+- [x] Subscribe to master topic
+- [x] Create suitable objects with messages arrive
+- [ ] Change athena.js to use settings.json instead of settings.js
 - [ ] Store said objects in MongoDb Collection
 - [ ] Store a record for topics in separate Collection
 - [ ] Build REST API to collect this information
