@@ -55,6 +55,9 @@ This is the current spec for the settings file. It should be called settings.jso
   // The Mongo DB Details
   "mongoDbHost"     : "localhost",
   "mongoDbPort"     : 27017,
+  "mongoDbName"     : "athena",
+  "mongoDbUser"     : null,
+  "mongoDbPass"     : null,
 
   // Verbose, set to true to get more debug info.
   "verbose"         : true
@@ -67,4 +70,21 @@ This is the current spec for the settings file. It should be called settings.jso
 |      URI     |         Function         |   Example   |          Status          |
 |--------------|--------------------------|-------------|--------------------------|
 | /api/topics  | Returns a list of topics | /api/topics | :heavy_multiplication_x: |
-| /api/records/? | Returns records for a topic | TODO | :heavy_multiplication_x: |
+| /api/records/<topicId> | Returns records for a topic | /api/recorcs/1 | :heavy_multiplication_x: |
+| /api/records/<topicId>?q=<query> | Returns records for a topic that match the query provided | /api/records/1?q=<query>  | :heavy_multiplication_x: |
+
+### Query Fields
+
+| Field |     Description     | Usage | Status |
+|-------|---------------------|-------|--------|
+| start | Start Date and time | TODO  |  :heavy_multiplication_x: |
+| end   | End Date and time   | TODO  |  :heavy_multiplication_x: |
+| value | The value to match by | TODO |  :heavy_multiplication_x: |
+
+
+## Rules Engine
+
+As messages are published to the parent topic they are processed and encapsulated in a larger object.
+The topic they were published to is added to the topics collection if it did not already exist.
+
+At this point, you can also add in basic rule processing for global messages, those with a specific type (i.e. power, temp, light etc..) or those that are published to a specific topic.
