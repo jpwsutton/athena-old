@@ -14,15 +14,18 @@ console.log("----------------")
 
 
 var app = express();
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/webapp/app'));
+app.use('/bower_components',  express.static(__dirname + '/webapp/bower_components'));
+
 
 
 app.get('/topics', topics.findAll);
 app.get('/records/:id', records.findById)
 
 
+
 var server = app.listen(3000, function () {
   var host = server.address().address
   var port = server.address().port
-  console.log('Example app listening at http://%s:%s', host, port)
+  console.log('Athena listening at http://%s:%s', host, port)
 });

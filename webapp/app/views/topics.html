@@ -1,0 +1,21 @@
+<h2>Topics</h2>
+
+<div id="topicTable">
+    <table class="table table-hover">
+        <thead>
+            <tr>
+                <td>Topic</td>
+                <td>Type</td>
+                <td>Manage</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="topic in topics">
+                <td>{{topic.topic}}</td>
+                <td>{{topic.type}}</td>
+                <td>{{topic._id}}</td>
+            </tr>
+        </tbody>
+
+    </table>
+</div>
