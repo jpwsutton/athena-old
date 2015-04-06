@@ -1,0 +1,11 @@
+<tr>
+    <td><a href="/#/topics" ng-click="toggleCollapse()">{{topic.topic}}</a></td>
+    <td>{{topic.type}}</td>
+    <td>{{topic._id}}</td>
+</tr>
+<tr collapse="isCollapsed">
+    <td colspan="3">
+        <h3>{{topic.topic}}</h3>
+        <chart value="myChart" width="700" height="200"></chart>
+    </td>
+</tr>

@@ -17,11 +17,10 @@ var app = express();
 app.use(express.static(__dirname + '/webapp/app'));
 app.use('/bower_components',  express.static(__dirname + '/webapp/bower_components'));
 
-
-
 app.get('/topics', topics.findAll);
 app.get('/records/:id', records.findById)
 
+global.lastMessages = {};
 
 
 var server = app.listen(3000, function () {

@@ -9,13 +9,6 @@
                 <td>Manage</td>
             </tr>
         </thead>
-        <tbody>
-            <tr ng-repeat="topic in topics">
-                <td>{{topic.topic}}</td>
-                <td>{{topic.type}}</td>
-                <td>{{topic._id}}</td>
-            </tr>
-        </tbody>
-
+        <tbody topic-directive ng-repeat="topic in topics" topic="topic"></tbody>
     </table>
 </div>

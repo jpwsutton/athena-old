@@ -65,6 +65,7 @@ function verifyOrCreateTopic(record){
 }
 
 function processIncomingMessage(record){
+    global.lastMessages[record.topic] = record;
   db.collection('records', function(err, collection){
     collection.insert(record, {safe:true}, function(err, result){
       if(err){

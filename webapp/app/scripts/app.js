@@ -15,7 +15,9 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
+    'ui.bootstrap',
+    'chartjs-directive'
   ])
   .config(function ($routeProvider) {
     $routeProvider
