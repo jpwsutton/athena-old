@@ -41,6 +41,13 @@ MqttClient.on('message', function(topic, message){
   processIncomingMessage(record);
 });
 
+MqttClient.on('offline', function(){
+    logError('MQTT Connection was lost, reconnecting...');
+    // Oh Hell no! You went offline!?!
+    MqttClient = mqtt.createClient(config.mqttBrokerPort, config.mqttBrokerHost);
+    MqttClient.subscribe(config.mqttBrokerTopic);
+});
+
 
 function verifyOrCreateTopic(record){
   db.collection('topics', function(err, collection){
