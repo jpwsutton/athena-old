@@ -1,103 +1,123 @@
 <!doctype html>
 <html class="no-js">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width">
-    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
-    <!-- build:css(.) styles/vendor.css -->
-    <!-- bower:css -->
-    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-    <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
-    <!-- endbower -->
-    <!-- endbuild -->
-    <!-- build:css(.tmp) styles/main.css -->
-    <link rel="stylesheet" href="styles/main.css">
-    <!-- endbuild -->
-  </head>
-  <body ng-app="athenaApp">
-    <!--[if lt IE 7]>
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <!-- build:css(.) styles/vendor.css -->
+  <!-- bower:css -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
+  <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
+  <link rel="stylesheet" href="bower_components/angular-dialog-service/dist/dialogs.min.css">
+  <link rel="stylesheet" href="bower_components/GoogleNexusWebsiteMenu/css/component.css">
+  <link rel="stylesheet" href="bower_components/GoogleNexusWebsiteMenu/css/normalize.css">
+  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+  <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500|Montserrat:400,700">
+  <!-- endbower -->
+  <!-- endbuild -->
+  <!-- build:css(.tmp) styles/main.css -->
+  <link rel="stylesheet" href="styles/main.css">
+  <!-- endbuild -->
+</head>
+
+<body ng-app="athenaApp">
+  <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
 
-    <!-- Add your site or application content here -->
-    <div class="header">
-      <div class="navbar navbar-default" role="navigation">
-        <div class="container">
-          <div class="navbar-header">
+  <!-- Add your site or application content here -->
+  <div class="header">
+    <div class="side-nav">
+      <ul id="gn-menu" class="gn-menu-main">
+  				<li class="gn-trigger">
+  					<a class="gn-icon gn-icon-menu"><span>Menu</span></a>
+  					<nav class="gn-menu-wrapper">
+  						<div class="gn-scroller">
+  							<ul class="gn-menu">
+  								<li class="gn-search-item">
+  									<input placeholder="Search" type="search" class="gn-search">
+  									<a class="gn-icon gn-icon-search"><span>Search</span></a>
+  								</li>
+  								<li>
+  									<a class="gn-icon gn-icon-download">Topics</a>
+  								</li>
+  								<li><a class="gn-icon gn-icon-cog">Settings</a></li>
+  								<li><a class="gn-icon gn-icon-help">Help</a></li>
+  							</ul>
+  						</div><!-- /gn-scroller -->
+  					</nav>
+  				</li>
+  				<li class="codrops-icon codrops-icon-drop"><h2>Athena</h2></li>
+  			</ul>
 
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
-              <span class="sr-only">Toggle navigation</span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </button>
 
-            <a class="navbar-brand" href="#/">athena</a>
-          </div>
-
-          <div class="collapse navbar-collapse" id="js-navbar-collapse" ng-controller="HeaderController">
-
-            <ul class="nav navbar-nav">
-              <li ng-class="{ active: isActive('/')}"><a href="#/">Home</a></li>
-              <li ng-class="{ active: isActive('/topics')}" ><a ng-href="#/topics">Topics</a></li>
-              <li ng-class="{ active: isActive('/settings')}"><a  ng-href="#/settings">Settings</a></li>
-              <li><a target="_blank" ng-href="https://github.com/jpwsutton/athena">Help</a></li>
-            </ul>
-          </div>
-        </div>
-      </div>
     </div>
 
-    <div class="container">
+  </div>
+  </div>
+
+  <div class="container-fluid">
     <div ng-view=""></div>
+  </div>
+
+  <div class="footer">
+    <div class="container">
+      <p>
+        <span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
     </div>
-
-    <div class="footer">
-      <div class="container">
-        <p><span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-      </div>
-    </div>
+  </div>
 
 
-    <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       !function(A,n,g,u,l,a,r){A.GoogleAnalyticsObject=l,A[l]=A[l]||function(){
-       (A[l].q=A[l].q||[]).push(arguments)},A[l].l=+new Date,a=n.createElement(g),
-       r=n.getElementsByTagName(g)[0],a.src=u,r.parentNode.insertBefore(a,r)
-       }(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
+  <script>
+    ! function(A, n, g, u, l, a, r) {
+      A.GoogleAnalyticsObject = l, A[l] = A[l] || function() {
+          (A[l].q = A[l].q || []).push(arguments)
+        }, A[l].l = +new Date, a = n.createElement(g),
+        r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
+    }(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
-    </script>
+    ga('create', 'UA-XXXXX-X');
+    ga('send', 'pageview');
+  </script>
 
-    <!-- build:js(.) scripts/vendor.js -->
-    <!-- bower:js -->
-    <script src="bower_components/jquery/dist/jquery.js"></script>
-    <script src="bower_components/angular/angular.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
-    <script src="bower_components/angular-animate/angular-animate.js"></script>
-    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-    <script src="bower_components/angular-resource/angular-resource.js"></script>
-    <script src="bower_components/angular-route/angular-route.js"></script>
-    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-    <script src="bower_components/angular-touch/angular-touch.js"></script>
-    <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
-    <script src="bower_components/highcharts-ng/dist/highcharts-ng.js"></script>
-    <script src="bower_components/highcharts/highcharts.js"></script>
+  <!-- build:js(.) scripts/vendor.js -->
+  <!-- bower:js -->
+  <script src="bower_components/jquery/dist/jquery.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.js"></script>
+  <script src="bower_components/angular-animate/angular-animate.js"></script>
+  <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="bower_components/angular-resource/angular-resource.js"></script>
+  <script src="bower_components/angular-route/angular-route.js"></script>
+  <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+  <script src="bower_components/angular-touch/angular-touch.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
+  <script src="bower_components/highcharts-ng/dist/highcharts-ng.js"></script>
+  <script src="bower_components/highcharts/highcharts.js"></script>
+  <script src="bower_components/angular-dialog-service/dist/dialogs.min.js"></script>
+  <script src="bower_components/GoogleNexusWebsiteMenu/js/classie.js"></script>
+  <script src="bower_components/GoogleNexusWebsiteMenu/js/gnmenu.js"></script>
 
+  <script>
+  			new gnMenu( document.getElementById( 'gn-menu' ) );
+  		</script>
 
-    <!-- endbower -->
-    <!-- endbuild -->
+  <!-- endbower -->
+  <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/controllers/topics.js"></script>
-        <script src="scripts/controllers/settings.js"></script>
-        <script src="scripts/controllers/HeaderController.js"></script>
-        <script src="scripts/directives/topicdirective.js"></script>
-        <!-- endbuild -->
+  <!-- build:js({.tmp,app}) scripts/scripts.js -->
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/main.js"></script>
+  <script src="scripts/controllers/topics.js"></script>
+  <script src="scripts/controllers/settings.js"></script>
+  <script src="scripts/controllers/HeaderController.js"></script>
+  <script src="scripts/directives/topicdirective.js"></script>
+  <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.10.0.js"></script>
+  <!-- endbuild -->
 </body>
+
 </html>

@@ -58,8 +58,13 @@ exports.findById = function(req, res) {
 
 
 
+  /*
+   *
+   *
+   */
   db.collection('topics', function(err, topicCollection) {
     topicCollection.findOne({'_id':new BSON.ObjectID(id)}, function(err, item) {
+      var funcStartTime = new Date().getTime();
       console.log("Retrieving Records for topic: " + item.topic);
       console.log("Start:    " + start);
       console.log("End:      " + end);
@@ -69,7 +74,8 @@ exports.findById = function(req, res) {
           console.error(err);
           res.send(err);
         } else {
-          recordsCollection.find({topic:item.topic, time:{$gte: start.getTime(), $lt: end.getTime()}}).sort({time: 1}).toArray(function(err, records){
+          recordsCollection.find({topic:item.topic, time:{$gte: start.getTime(), $lt: end.getTime()}}).sort({time: 1})
+                                .toArray(function(err, records){
 
 
               if(interval === 0){
@@ -110,6 +116,8 @@ exports.findById = function(req, res) {
                       }
                       timeCursor += mInt;
                   }
+                  var timetorun = (new Date().getTime()) - funcStartTime;
+                  console.log("Get recods took "+ timetorun + " milliseconds");
 
                   res.send(avgRecords);
 

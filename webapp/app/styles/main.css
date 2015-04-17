@@ -7,7 +7,123 @@
 
 body {
   padding: 0;
+  background: #2C3E50;
+  height: 100%;
+  font-family: 'Roboto',sans-serif;
+  -webkit-font-smoothing: antialiased;
+  color: #ffffff;
 }
+
+.gn-menu-main {
+  margin: 0;
+padding: 0;
+background: none repeat scroll 0 0 #303847;
+border-bottom: 1px solid #303847;
+color: #ffffff;
+list-style: none;
+text-transform: none;
+font-weight: 300;
+font-family: 'Lato', Arial, sans-serif;
+line-height: 60px;
+}
+
+
+.ui-main-menu,
+.ui-main-menu ul {
+  margin: 0;
+  padding: 0;
+  background: none repeat scroll 0 0 #303847;
+  border-bottom: 1px solid #303847;
+  color: #ffffff;
+  list-style: none;
+  text-transform: none;
+  font-weight: 300;
+  font-family: 'Lato', Arial, sans-serif;
+  line-height: 60px;
+}
+.ui-main-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  font-size: 13px;
+  z-index: 100;
+}
+.ui-main-menu a {
+  display: block;
+  height: 100%;
+  color: #ffffff;
+  text-decoration: none;
+  cursor: pointer;
+  font-family: 'Roboto',sans-serif, arial;
+}
+
+.ui-main-menu a:hover {
+color: #F56060;
+}
+.no-touch .ui-main-menu a:hover,
+.no-touch .gn-menu li.gn-search-item:hover,
+.no-touch .gn-menu li.gn-search-item:hover a {
+  color: #ffffff;
+}
+.no-touch .gn-menu li.current a {
+color: #f;
+}
+.ui-main-menu > li {
+  display: block;
+  float: left;
+  height: 100%;
+  border-right: none;
+  text-align: center;
+}
+.ui-main-menu > li.cta {
+  float: right;
+  border-right: 0;
+  border-left: none;
+}
+.ui-main-menu > li.cta a {
+  font-weight: 200;
+  font-size: 1.3em;
+  font-family: "Lato", Helvetica, sans-serif;
+}
+
+.ui-main-menu > li.cta a:hover {
+ color: #4FD8BF;
+}
+
+.ui-main-menu li.logo-wrapper {
+float: right;
+margin-top: 5px;
+}
+
+/* icon-only trigger (menu item) */
+.ui-main-menu li.ui-menu-button {
+  position: relative;
+  width: 69px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.ui-main-menu > li > a {
+  padding: 0 30px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 200;
+  line-height: 70px;
+}
+.ui-main-menu:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+
+
+
 
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
@@ -80,4 +196,12 @@ body {
   .jumbotron {
     border-bottom: 0;
   }
+}
+
+
+
+
+/* Padding for Fontawesome icons that are next to each other */
+.fa {
+  padding: 0px 10px;
 }
