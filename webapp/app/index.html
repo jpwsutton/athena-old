@@ -10,17 +10,17 @@
   <!-- build:css(.) styles/vendor.css -->
   <!-- bower:css -->
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css" />
-  <link rel="stylesheet" href="bower_components/angular-chart.js/dist/angular-chart.css">
-  <link rel="stylesheet" href="bower_components/angular-dialog-service/dist/dialogs.min.css">
-  <link rel="stylesheet" href="bower_components/GoogleNexusWebsiteMenu/css/component.css">
-  <link rel="stylesheet" href="bower_components/GoogleNexusWebsiteMenu/css/normalize.css">
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
-  <link type="text/css" rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100,300,500|Montserrat:400,700">
+  <link rel="stylesheet" href="bower_components/roboto-fontface/roboto-fontface.css" />
+  <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css" />
+  <link rel="stylesheet" href="bower_components/lato/css/lato.css" />
   <!-- endbower -->
+
   <!-- endbuild -->
   <!-- build:css(.tmp) styles/main.css -->
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
+
+  <link rel="stylesheet" href="bower_components/GoogleNexusWebsiteMenu/css/component.css" />
 </head>
 
 <body ng-app="athenaApp">
@@ -50,7 +50,7 @@
   						</div><!-- /gn-scroller -->
   					</nav>
   				</li>
-  				<li class="codrops-icon codrops-icon-drop"><h2>Athena</h2></li>
+  				<li class="title-logo"><a ><i class="fa fa-area-chart"></i><span>Athena</span></a></li>
   			</ul>
 
 
@@ -63,26 +63,15 @@
     <div ng-view=""></div>
   </div>
 
-  <div class="footer">
+  <!--<div class="footer">
     <div class="container">
       <p>
         <span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
     </div>
   </div>
 
+  -->
 
-  <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-  <script>
-    ! function(A, n, g, u, l, a, r) {
-      A.GoogleAnalyticsObject = l, A[l] = A[l] || function() {
-          (A[l].q = A[l].q || []).push(arguments)
-        }, A[l].l = +new Date, a = n.createElement(g),
-        r = n.getElementsByTagName(g)[0], a.src = u, r.parentNode.insertBefore(a, r)
-    }(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
-
-    ga('create', 'UA-XXXXX-X');
-    ga('send', 'pageview');
-  </script>
 
   <!-- build:js(.) scripts/vendor.js -->
   <!-- bower:js -->
@@ -95,18 +84,10 @@
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
   <script src="bower_components/angular-touch/angular-touch.js"></script>
-  <script src="bower_components/angular-bootstrap/ui-bootstrap.js"></script>
-  <script src="bower_components/highcharts-ng/dist/highcharts-ng.js"></script>
-  <script src="bower_components/highcharts/highcharts.js"></script>
-  <script src="bower_components/angular-dialog-service/dist/dialogs.min.js"></script>
-  <script src="bower_components/GoogleNexusWebsiteMenu/js/classie.js"></script>
-  <script src="bower_components/GoogleNexusWebsiteMenu/js/gnmenu.js"></script>
-
-  <script>
-  			new gnMenu( document.getElementById( 'gn-menu' ) );
-  		</script>
-
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
   <!-- endbower -->
+
+
   <!-- endbuild -->
 
   <!-- build:js({.tmp,app}) scripts/scripts.js -->
@@ -116,8 +97,17 @@
   <script src="scripts/controllers/settings.js"></script>
   <script src="scripts/controllers/HeaderController.js"></script>
   <script src="scripts/directives/topicdirective.js"></script>
-  <script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.10.0.js"></script>
+  <!--<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.10.0.js"></script>-->
   <!-- endbuild -->
+
+  <!-- Bower dependencies that bower blats every time it runs -->
+  <script src="bower_components/GoogleNexusWebsiteMenu/js/classie.js"></script>
+  <script src="bower_components/GoogleNexusWebsiteMenu/js/gnmenu.js"></script>
+  <!-- -->
+
+  <script>
+      new gnMenu( document.getElementById( 'gn-menu' ) );
+  </script>
 </body>
 
 </html>

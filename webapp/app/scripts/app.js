@@ -15,10 +15,7 @@ angular
 		'ngResource',
 		'ngRoute',
 		'ngSanitize',
-		'ngTouch',
-		'ui.bootstrap',
-		'highcharts-ng',
-		'dialogs.main'
+		'ngTouch'
 	])
 	.config(function($routeProvider) {
 		$routeProvider
