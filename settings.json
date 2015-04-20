@@ -1,18 +1,18 @@
 {
-  "mqttBrokerHost"  : "jsutton.co.uk",
-  "mqttBrokerPort"  : 1883,
-  "mqttBrokerUser"  : null,
-  "mqttBrokerPass"  : null,
-  "mqttBrokerTopic" : "/home/#",
+	"mqttBrokerHost": "jsutton.co.uk",
+	"mqttBrokerPort": 1883,
+	"mqttBrokerUser": null,
+	"mqttBrokerPass": null,
+	"mqttBrokerTopic": "/home/#",
 
-  "mongoDbHost"     : "localhost",
-  "mongoDbPort"     : 27017,
-  "mongoDbName"     : "athena",
-  "mongoDbUser"     : null,
-  "mongoDbPass"     : null,
-
-
+	"mongoDbHost": "localhost",
+	"mongoDbPort": 4321,
+	"mongoDbName": "athena",
+	"mongoDbUser": null,
+	"mongoDbPass": null,
 
 
-  "verbose"         : true
+	"readOnlyMode": true,
+
+	"verbose": true
 }

@@ -61,7 +61,7 @@
 
 
 	        // Get the last 24 hours of records
-	        $http.get('/records/' + scope.topic._id + '?interval=30').success(
+	        $http.get('/records/' + scope.topic._id + '?interval=15').success(
 	            function(
 	              data) {
 	              // Generate Chart Labels
