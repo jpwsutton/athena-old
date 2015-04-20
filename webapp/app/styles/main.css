@@ -176,7 +176,12 @@ body {
 }
 
 .filter-search {
+    position: static;
     width: 700px;
+}
+
+.static {
+    position: static !important;
 }
 
 .filter-search > input {
