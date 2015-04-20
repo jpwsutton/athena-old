@@ -1,24 +1,29 @@
-<div class="filters">
-    <h2>Filter Topics: <span>Type search terms, then hit enter to add them to the filter.</span></h2>
-    <form class="form-inline">
+<!-- Filter Div -->
+<div class="filters colour0">
 
-        <div class="input-group filter-search">
-            <input type="text" class="static form-control " placeholder="Text input">
-            <div class="input-group-addon static "><i class="static glyphicon glyphicon-search search-icon"/><span>Search</span></div>
-        </div>
-    </form>
+  <div class="row undo-padding">
+
+      <div class="col-md-2"></div>
+    <div class="col-md-7">
+
+      <h2>Filter Topics:
+        <span>Type search terms, then hit enter to add them to the filter.</span>
+      </h2>
+    </div>
+  </div>
+  <div class="row undo-padding">
+    <div class="col-md-2"></div>
+    <div class="col-md-7">
+      <div class="input-group input-group-lg">
+        <tags-input class="darkText" ng-model="tags"></tags-input>
+        <span class="input-group-btn">
+          <button class="btn btn-default btn-lg" type="submit">Search</button>
+        </span>
+      </div>
+    </div>
+  </div>
 </div>
-<div class="topic colour1">
+<!--  -->
 
-</div>
-
-<div class="topic colour2">
-
-</div>
-<div class="topic colour3">
-
-</div>
-
-<div class="topic colour4">
-
+<div topic-directive ng-repeat="topic in topics" topic="topic">
 </div>

@@ -15,7 +15,14 @@
     "roboto-fontface": "~0.3.0",
     "components-font-awesome": "~4.3.0",
     "lato-font": "~1.1.0",
-    "lato": "~0.3.0"
+    "lato": "~0.3.0",
+    "bootstrap-tokenfield": "~0.12.1",
+    "ng-tags-input": "~2.3.0",
+    "angular-chart.js": "~0.6.0",
+    "Chart.js": "~1.0.2",
+    "n3-line-chart": "~1.1.6",
+    "d3": "~3.5.5",
+    "angular-moment": "~0.10.0"
   },
   "appPath": "app",
   "moduleName": "athenaApp"

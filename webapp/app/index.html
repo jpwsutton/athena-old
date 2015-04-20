@@ -20,7 +20,11 @@
   <link rel="stylesheet" href="styles/main.css">
   <!-- endbuild -->
 
+  <link href='http://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
   <link rel="stylesheet" href="bower_components/GoogleNexusWebsiteMenu/css/component.css" />
+  <link rel="stylesheet" href="bower_components/ng-tags-input/ng-tags-input.min.css" />
+  <link rel="stylesheet" href="bower_components/ng-tags-input/ng-tags-input.bootstrap.min.css" />
 </head>
 
 <body ng-app="athenaApp">
@@ -29,7 +33,7 @@
     <![endif]-->
 
   <!-- Add your site or application content here -->
-  <div class="header">
+  <div class="navbar-fixed-top header">
     <div class="side-nav">
       <ul id="gn-menu" class="gn-menu-main">
   				<li class="gn-trigger">
@@ -63,16 +67,6 @@
     <div ng-view=""></div>
   </div>
 
-  <!--<div class="footer">
-    <div class="container">
-      <p>
-        <span class="glyphicon glyphicon-heart"></span> from the Yeoman team</p>
-    </div>
-  </div>
-
-  -->
-
-
   <!-- build:js(.) scripts/vendor.js -->
   <!-- bower:js -->
   <script src="bower_components/jquery/dist/jquery.js"></script>
@@ -85,6 +79,8 @@
   <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
   <script src="bower_components/angular-touch/angular-touch.js"></script>
   <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.js"></script>
+  <script src="bower_components/moment/moment.js"></script>
+  <script src="bower_components/angular-moment/angular-moment.js"></script>
   <!-- endbower -->
 
 
@@ -103,6 +99,10 @@
   <!-- Bower dependencies that bower blats every time it runs -->
   <script src="bower_components/GoogleNexusWebsiteMenu/js/classie.js"></script>
   <script src="bower_components/GoogleNexusWebsiteMenu/js/gnmenu.js"></script>
+  <script src="bower_components/ng-tags-input/ng-tags-input.min.js"></script>
+  <script src="bower_components/d3/d3.min.js"></script>
+  <script src="bower_components/n3-line-chart/build/line-chart.js"></script>
+
   <!-- -->
 
   <script>

@@ -15,7 +15,10 @@ angular
 		'ngResource',
 		'ngRoute',
 		'ngSanitize',
-		'ngTouch'
+		'ngTouch',
+		'ngTagsInput',
+		'n3-line-chart',
+		'angularMoment'
 	])
 	.config(function($routeProvider) {
 		$routeProvider
