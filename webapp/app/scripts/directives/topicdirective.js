@@ -30,7 +30,8 @@
 	              type: 'date'
 	            },
 	            y: {
-	              type: 'linear'
+	              type: 'linear',
+				  min: 0
 	            }
 	          },
 
