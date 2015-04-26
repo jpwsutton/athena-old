@@ -16,7 +16,7 @@
 	      scope: {
 	        topic: '=topic'
 	      },
-	      templateUrl: 'views/topic.html',
+	      templateUrl: 'shared/topic/topicView.html',
 	      link: function(scope) {
 	        console.log('Processing Topic : ' + scope.topic._id);
 	        if (!scope.topic.nickname) {

@@ -26,7 +26,7 @@ body {
   color: #333;
 }
 
-/* Debug, shows borders of cols 
+/* Debug, shows borders of cols
 [class*="col-"] {
   padding-top: 15px;
   padding-bottom: 15px;
@@ -252,30 +252,11 @@ line-height: 48px;
   width: 300px
 }
 
-.expander {
-  background-color: #FFFFFF;
-  height: 300px;
-  width: 70px;
-  border-width: 2px 2px 2px 2px;
-  border-color: #74818e;
-  border-style: solid;
-  float: left;
-}
-
-.expander i {
-  position: relative;
-  top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-    color: #5f6f81;
-
-}
 
 .side-box {
 /*  background-color: #FFFFFF; */
   width: auto;
-  height: auto;
+  height: 100%;
   /*  border-color: #74818e;
   border-style: solid; */
 }
@@ -283,13 +264,7 @@ line-height: 48px;
 
 
 
-.current-status {
-  border-width: 2px 2px 0px 0px;
-}
 
-.current-average {
-  border-width: 2px 2px 2px 0px;
-}
 
 .side-box h1 {
   font-family: 'Roboto',sans-serif;
@@ -327,8 +302,11 @@ line-height: 48px;
   float: left;
 }
 
-.side-box span::after{
+.side-box h1 > span::after{
   content: ":";
+}
+.side-box a {
+    color: #FFFFFF;
 }
 
 
@@ -345,7 +323,7 @@ line-height: 48px;
   }
 
 
-  .side-box span {
+  .side-box h1 span {
     letter-spacing: 1px;
     font-size: 20px;
     line-height: 28px;
@@ -354,9 +332,19 @@ line-height: 48px;
     margin-right: 10px;
   }
 
-  .side-box span::after{
+  .side-box h1 > span::after{
     content: ":";
   }
+
+  .side-box span {
+      letter-spacing: 1px;
+      font-size: 20px;
+      line-height: 28px;
+      text-align: center;
+      display:inline-block;
+      white-space:nowrap;
+  }
+
 }
 
 @media (min-width: 992px) {
@@ -370,13 +358,32 @@ line-height: 48px;
     line-height: 68px;
     text-align: center;
   }
-  .side-box span {
+  .side-box h1 span {
     letter-spacing: 1px;
     font-size: 40px;
     line-height: 48px;
     text-align: center;
     display:inline-block;
     white-space:nowrap;
+  }
+
+  .topic-side-panel {
+      height: 400px;
+  }
+
+  .settings-button {
+      position: absolute;
+      bottom: 0px;
+      padding-bottom: 50px
+  }
+
+  .side-box span {
+      letter-spacing: 1px;
+      font-size: 30px;
+      line-height: 38px;
+      text-align: center;
+      display:inline-block;
+      white-space:nowrap;
   }
 
   .side-box span::after{

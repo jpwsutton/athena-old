@@ -1,4 +1,6 @@
 <div class="topic" ng-class="topic.backgroundColourClass">
+    <div class="row undo-padding">
+
 
   <div class="row undo-padding">
     <div class="col-md-2">
@@ -8,7 +10,6 @@
         <span ng-bind="topic.topic"></span>
       </h2>
     </div>
-
     <div class="col-md-2">
 
     </div>
@@ -20,8 +21,8 @@
     <div class="col-md-6">
       <linechart data="data" options="options" mode="" width="" height="400"></linechart>
     </div>
-    <div class="col-md-2">
-      
+    <div class="col-md-2 topic-side-panel">
+
       <div class="row">
         <div class="col-md-2 current-status side-box">
           <h1>24 <span>Current</span></h1>
@@ -32,13 +33,18 @@
           <h1>23 <span>Average</span></h1>
         </div>
       </div>
+      <div class="row settings-button">
+          <div class="col-md-2 side-box ">
+              <a href='/#/topics'><span>Settings<i class="fa fa-cog"></i></span></a>
+          </div>
+      </div>
 
     </div>
     <div class="col-md-2">
 
     </div>
   </div>
-
+</div>
 </div>
 
 

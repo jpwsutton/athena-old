@@ -23,15 +23,15 @@ angular
 	.config(function($routeProvider) {
 		$routeProvider
 			.when('/', {
-				templateUrl: 'views/main.html',
+				templateUrl: 'components/home/homeView.html',
 				controller: 'MainCtrl'
 			})
 			.when('/topics', {
-				templateUrl: 'views/topics.html',
+				templateUrl: 'components/topics/topicsView.html',
 				controller: 'TopicsCtrl'
 			})
 			.when('/settings', {
-				templateUrl: 'views/settings.html',
+				templateUrl: 'components/settings/settingsView.html',
 				controller: 'SettingsCtrl'
 			})
 			.otherwise({
