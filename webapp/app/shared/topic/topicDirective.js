@@ -14,11 +14,64 @@
 	    return {
 	      restrict: 'A',
 	      scope: {
-	        topic: '=topic'
+	        topic: '=topic',
 	      },
 	      templateUrl: 'shared/topic/topicView.html',
 	      link: function(scope) {
 	        console.log('Processing Topic : ' + scope.topic._id);
+
+	        scope.settingsActive = false;
+
+	        scope.form = {};
+	        scope.form.average = false;
+
+	        scope.form.timeRangeOptions = [{
+	          label: '1 Hour',
+	          value: 1
+	        }, {
+	          label: '6 Hours',
+	          value: 6
+	        }, {
+	          label: '12 Hours',
+	          value: 12
+	        }, {
+	          label: '1 Day',
+	          value: 24
+	        }, {
+	          label: '2 Days',
+	          value: 48
+	        }, {
+	          label: '1 Week',
+	          value: 168
+	        }, {
+	          label: '1 Month',
+	          value: 720
+	        }, ];
+
+	        scope.form.averageRange = [{
+	          label: '1 Minute',
+	          value: 1
+	        }, {
+	          label: '5 Minutes',
+	          value: 5
+	        }, {
+	          label: '10 Minutes',
+	          value: 10
+	        }, {
+	          label: '15 Minutes',
+	          value: 15
+	        }, {
+	          label: '30 Minutes',
+	          value: 30
+	        }, {
+	          label: '60 Minutes',
+	          value: 60
+	        }, ]
+
+
+	        scope.form.timeRange = scope.form.timeRangeOptions[0];
+
+
 	        if (!scope.topic.nickname) {
 	          scope.topic.nickname = scope.topic.topic;
 	        }
@@ -31,7 +84,7 @@
 	            },
 	            y: {
 	              type: 'linear',
-				  min: 0
+	              min: 0
 	            }
 	          },
 

@@ -218,9 +218,7 @@ body {
 
 /* Topic Directive CSS */
 
-.topic {
-    /*height: 525px;*/
-}
+
 
 .topic h2 {
   margin: 0px;
@@ -284,6 +282,10 @@ line-height: 48px;
 
 /* Extra small is the default */
 
+.topic {
+    height: 650px;
+}
+
 .side-box h1 {
   letter-spacing: 1px;
   font-size: 20px;
@@ -312,6 +314,10 @@ line-height: 48px;
 
 
 @media (min-width: 768px) {
+
+  .topic {
+      height: 600px;
+  }
 
   .side-box h1 {
     letter-spacing: 1px;
@@ -348,6 +354,11 @@ line-height: 48px;
 }
 
 @media (min-width: 992px) {
+
+  .topic {
+      height: 500px;
+  }
+
   .side-box {
     max-width: 230px;
   }
