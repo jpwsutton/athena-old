@@ -1,12 +1,13 @@
 {
-  "name"         : "athena",
-  "version"      : "0.0.1",
-  "description"  : "MQTT Recording and presentation.",
-  "main"         : "athena.js",
-  "author"       : "jsutton",
-  "dependencies" : {
-    "mqtt"       : "0.3.12",
-    "mongodb"    : "1.4.19",
-    "express"    : "4.x"
-  }
+	"name": "athena",
+	"version": "0.0.1",
+	"description": "MQTT Recording and presentation.",
+	"main": "athena.js",
+	"author": "jsutton",
+	"dependencies": {
+		"mqtt": "0.3.12",
+		"mongodb": "1.4.19",
+		"express": "4.x",
+		"body-parser": ""
+	}
 }

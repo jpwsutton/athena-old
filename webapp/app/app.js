@@ -18,7 +18,9 @@ angular
 		'ngTouch',
 		'ngTagsInput',
 		'n3-line-chart',
-		'angularMoment'
+		'angularMoment',
+		'angular-flash.service',
+		'angular-flash.flash-alert-directive'
 	])
 	.config(function($routeProvider) {
 		$routeProvider
@@ -41,4 +43,9 @@ angular
 			.otherwise({
 				redirectTo: '/'
 			});
-	});
+	}).config(function(flashProvider) {
+		flashProvider.errorClassnames.push('alert-danger');
+	}).run(['topicService', function($topicService) {
+		$topicService.init();
+
+	}]);
