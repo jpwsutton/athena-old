@@ -18,6 +18,7 @@ app.use(express.static(__dirname + '/webapp/app'));
 app.use('/bower_components',  express.static(__dirname + '/webapp/bower_components'));
 
 app.get('/topics', topics.findAll);
+app.get('/topics/:id', topics.findById)
 app.get('/records/:id', records.findById)
 
 global.lastMessages = {};

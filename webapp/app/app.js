@@ -30,6 +30,10 @@ angular
 				templateUrl: 'components/topics/topicsView.html',
 				controller: 'TopicsCtrl'
 			})
+			.when('/topic/:topicId', {
+				templateUrl: 'components/topic/topicView.html',
+				controller: 'TopicCtrl'
+			})
 			.when('/settings', {
 				templateUrl: 'components/settings/settingsView.html',
 				controller: 'SettingsCtrl'

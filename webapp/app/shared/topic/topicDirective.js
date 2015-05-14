@@ -18,6 +18,7 @@
 	      },
 	      templateUrl: 'shared/topic/topicView.html',
 	      link: function(scope) {
+			console.log(scope.topic);
 	        console.log('Processing Topic : ' + scope.topic._id);
 
 	        scope.settingsActive = false;
